@@ -9,6 +9,10 @@ import {
     ParallaxImage,
     type ParallaxImageProps,
 } from "./variants/ParallaxImage/ParallaxImage";
+import {
+    ParallaxVideo,
+    type ParallaxVideoProps,
+} from "./variants/ParallaxVideo/ParallaxVideo"
 
 /**
  * to avoid passing wrong props to the component
@@ -29,6 +33,10 @@ type HeroProps =
     | {
           heroType: "ParallaxImage";
           data: ParallaxImageProps;
+      }
+    | {
+        heroType: "ParallaxVideo";
+        data: ParallaxVideoProps;
       };
 
 export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
@@ -60,6 +68,12 @@ export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
             HeroTypeOutput = (
                 <ParallaxImage {...(data as ParallaxImageProps)} {...rest} />
             );
+            break;
+        case "ParallaxVideo":
+            HeroTypeOutput = (
+                <ParallaxVideo {...(data as ParallaxVideoProps)} {...rest} />
+            );
+
     }
 
     const isFullWidth =

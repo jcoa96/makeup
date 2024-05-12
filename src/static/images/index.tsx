@@ -1,14 +1,16 @@
 import { type FC } from "react";
 import PreviewPng from "./preview.webp";
 import HeroImg from "./hero-img.webp";
-import Logo from "./logo.webp";
+import Logo from "./logo-vic-new.webp";
 
-import HeroSlider1 from "./hero-slider-01.webp";
+import HeroSlider1 from "../videos/Clip-8.mp4";
 import HeroSlider2 from "./hero-slider-02.webp";
-import HeroSlider3 from "./hero-slider-03.webp";
+import HeroSlider3 from "./foto-arcoiris.jpeg";
 
 import InfiniteImg1 from "./infinite-img-1.webp";
 import InfiniteImg2 from "./infinite-img-2.webp";
+
+import Patron from "./fondo-black-2.png"
 
 export const images = {
     preview: PreviewPng,
@@ -19,6 +21,15 @@ export const images = {
 export type ImageProps = {
     srcLocal?: keyof typeof images;
     src?: string;
+    alt: string;
+    width?: number | string;
+    height?: number | string;
+    loading?: "lazy" | "eager";
+};
+
+export type VideoProps = {
+    src?: string;
+    type?: string; // Añade un tipo de archivo de video opcional si es necesario
     alt: string;
     width?: number | string;
     height?: number | string;
@@ -62,6 +73,31 @@ export const Image: FC<ImageProps> = ({
     );
 };
 
+export const Video: FC<VideoProps> = ({
+    alt,
+    height,
+    width,
+    src,
+    loading,
+    ...rest
+}) => {
+    if (src) {
+        console.warn("Missing 'type' prop for video.");
+    }
+
+    const media = { src, width, height };
+
+    return (
+        <video
+            src={media.src}
+            width={width ? width : media.width}
+            height={height ? height : media.height}
+            controls
+            {...rest}
+        />
+    );
+};
+
 // default export of the images
 export {
     PreviewPng,
@@ -70,4 +106,5 @@ export {
     HeroSlider3,
     InfiniteImg1,
     InfiniteImg2,
+    Patron
 };

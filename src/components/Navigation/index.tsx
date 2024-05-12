@@ -11,21 +11,13 @@ export const Navigation: FC = () => {
             <S.NavigationListWrapper $isOpen={isOpen}>
                 <S.NavigationList>
                     <li>
-                        <a href="/">Cybernetic</a>
+                        <a href="/">Aprende conmigo</a>
                     </li>
                     <li>
-                        <a
-                            href="https://codexcode.store/themes/cybernetic-website-template"
-                            target="_blank"
-                        >
-                            Pro version
-                        </a>
+                        <a href="/infinite">Sobre mi</a>
                     </li>
                     <li>
-                        <a href="/infinite">Infinite</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/contact">Contacto</a>
                     </li>
                 </S.NavigationList>
             </S.NavigationListWrapper>

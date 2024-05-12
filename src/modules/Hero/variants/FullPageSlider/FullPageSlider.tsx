@@ -6,11 +6,13 @@ import { Parallax, Pagination, Autoplay } from "swiper/modules";
 import { Icon } from "@static/icons";
 import { FadeIn } from "@utils/animations/FadeIn";
 import { Button } from "@components/Button";
+import { Patron } from "@static/images";
 
 export type FullPageSliderProps = {
     // content treated as HTML output
     content?: {
         background: string;
+        videoBackground?: boolean;
         subtitle?: string;
         title: string;
         paragraph?: string;
@@ -32,8 +34,35 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
      * @param slide - slide content
      */
     const slides = content.map((slide, index) => (
-        <S.FullPageSliderSlide key={index} $bgImage={slide.background}>
-            {slide.background && (
+        <S.FullPageSliderSlide $bgImage={slide.background} key={index}>
+            {slide.videoBackground && (
+                <div style={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    filter: 'brightness(0.4)',
+                    left: 0,
+                    backgroundImage: `url(${Patron.src})`,
+                    backgroundColor: 'black'
+                }}>
+                    <video 
+                        style={{
+                            border: 'solid 10px #000',
+                            borderRadius: '40%',
+                            position: 'absolute',
+                            height: '96%',
+                            width: 'auto',
+                            backgroundSize: 'contain'
+
+                        }}
+                    autoPlay loop muted src={slide.background} />
+                </div>
+            )}
+            {slide.background && !slide.videoBackground && (
                 <S.FullPageSliderSlideImg data-swiper-parallax="70%">
                     <img src={slide.background} alt={slide.title} />
                 </S.FullPageSliderSlideImg>
@@ -48,11 +77,7 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
                     {slide.title && <h1>{slide.title}</h1>}
                     {slide.paragraph && <p>{slide.paragraph}</p>}
                     {slide.button && slide.button.text && slide.button.link && (
-                        <Button
-                            variant="primary"
-                            showIcon={true}
-                            link={slide.button.link}
-                        >
+                        <Button variant="primary" showIcon={true} link={slide.button.link}>
                             {slide.button.text}
                         </Button>
                     )}
@@ -79,7 +104,7 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
                         type: "progressbar",
                     },
                     autoplay: {
-                        delay: 5000,
+                        delay: 15000,
                     },
                 }}
             >
@@ -88,7 +113,7 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
             {slides.length > 1 ? (
                 <>
                     <S.FullPageSliderTextToSlide>
-                        Swipe to slide
+                        Desliza para mas
                         <Icon iconData="arrowRight" alt="arrow icon" />
                     </S.FullPageSliderTextToSlide>
                     <div className="swiper-pagination"></div>

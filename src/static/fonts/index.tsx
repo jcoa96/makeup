@@ -10,6 +10,7 @@ import RobotoMediumItalic from "./Roboto-MediumItalic.woff2";
 import RobotoRegular from "./Roboto-Regular.woff2";
 import RobotoThin from "./Roboto-Thin.woff2";
 import RobotoThinItalic from "./Roboto-ThinItalic.woff2";
+import TanMeringue from "./TAN MERINGUE.ttf"
 
 export {
     RobotoBlack,
@@ -24,4 +25,5 @@ export {
     RobotoRegular,
     RobotoThin,
     RobotoThinItalic,
+    TanMeringue
 };

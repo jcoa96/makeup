@@ -146,12 +146,13 @@ export const FullPageSliderSlideContent = styled.div`
     color: ${Theme.primary};
 
     h1 {
-        font-size: 180px;
+        font-size: 4.5rem;
         line-height: 130px;
         text-transform: uppercase;
         font-weight: 900;
         margin-left: -15px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
+        font-family: TanMeringue;
 
         ${MediaQuery.max("xl")} {
             font-size: 90px;
@@ -160,7 +161,7 @@ export const FullPageSliderSlideContent = styled.div`
         }
 
         ${MediaQuery.max("lg")} {
-            font-size: 40px;
+            font-size: 30px;
             line-height: 50px;
             margin-bottom: 20px;
             margin-left: 0;

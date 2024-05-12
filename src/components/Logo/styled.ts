@@ -4,6 +4,8 @@ import { Theme } from "@styles/colors";
 export const LogoStyled = styled.div`
     position: relative;
     z-index: 3;
+    
+
 
     a {
         font-size: 35px;
@@ -31,8 +33,8 @@ export const LogoStyled = styled.div`
         }
 
         img {
-            height: 50px;
-            width: 63px;
+            height: 85px;
+            width: auto;
             object-fit: contain;
         }
     }
