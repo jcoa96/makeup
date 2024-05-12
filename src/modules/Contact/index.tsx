@@ -2,25 +2,32 @@ import { type FC } from "react";
 import * as S from "./styled";
 import { TextBox } from "@components/textBox";
 import { FadeIn } from "@utils/animations/FadeIn";
+import { icons } from "@static/icons"
 
 export const Contact: FC = () => {
     return (
         <S.ContactStyled>
             <S.ContainerStyled>
                 <S.ContactBox>
-                    <FadeIn delay={0.1}>
+                    <FadeIn delay={0.2}>
                         <TextBox
                             variant="background-text"
                             bgText="Phone"
                             boxAsLink={true}
-                            href="tel:+52 123 233 421"
+                            href="https://wa.me/584121072808"
                             target="_blank"
                         >
-                            <h3>+52 123 233 421</h3>
-                            <p>
-                                you can call me if you have any questions or
-                                just want to say hi
-                            </p>
+                            <div style={{ display: 'flex', gap: '1rem' }}>
+                                <div style={{ height: '60px', width: '60px' }}>
+                                    <img style={{ height: '100%', width: '100%' }} src={icons.phone.src} alt="telefono" />
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                    <h3>Agenda tu cita aqui</h3>
+                                    <p>
+                                        Escribeme para reservar 🥰
+                                    </p>
+                                </div>
+                            </div>
                         </TextBox>
                     </FadeIn>
                     <FadeIn delay={0.2}>
@@ -28,24 +35,23 @@ export const Contact: FC = () => {
                             variant="background-text"
                             bgText="Email"
                             boxAsLink={true}
-                            href="mailto:youremail@gmail.com"
+                            href="mailto:victoriapaezmakeup@gmail.com"
                             target="_blank"
                         >
-                            <h3>youremail@gmail.com</h3>
-                            <p>
-                                also you can write me an email if you have any
-                                questions
-                            </p>
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                                <div style={{ height: '60px', width: '80px', display: 'flex', alignItems: 'center' }}>
+                                    <img style={{ height: 'auto', width: '100%' }} src={icons.correo.src} alt="telefono" />
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                    <h3>Enviame tu propuesta comercial por aqui</h3>
+                                    <p>
+                                        !Encantada de crear juntos!
+                                    </p>
+                                </div>
+                            </div>
                         </TextBox>
                     </FadeIn>
                 </S.ContactBox>
-                <FadeIn delay={0.3}>
-                    <TextBox variant="background-text" bgText="Address">
-                        <h3>Address</h3>
-                        <p>Some street 123, 12345 City, Country</p>
-                        <p>Office: Mystr street 321, 54321 City, Country</p>
-                    </TextBox>
-                </FadeIn>
             </S.ContainerStyled>
         </S.ContactStyled>
     );

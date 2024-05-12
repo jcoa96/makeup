@@ -11,6 +11,7 @@ export const Socials: FC = ({ ...rest }) => {
                         href="https://github.com"
                         target="_blank"
                         rel="noreferrer"
+                        className="github" // Clase para Github
                     >
                         <p>Github</p>
                         <Icon iconData="github" alt="github icon" />
@@ -21,6 +22,7 @@ export const Socials: FC = ({ ...rest }) => {
                         href="https://linkedin.com"
                         target="_blank"
                         rel="noreferrer"
+                        className="linkedin" // Clase para LinkedIn
                     >
                         <p>LinkedIn</p>
                         <Icon iconData="linkedin" alt="linkedin icon" />
@@ -31,6 +33,7 @@ export const Socials: FC = ({ ...rest }) => {
                         href="https://facebook.com"
                         target="_blank"
                         rel="noreferrer"
+                        className="facebook" // Clase para Facebook
                     >
                         <p>Facebook</p>
                         <Icon iconData="facebook" alt="facebook icon" />
@@ -41,6 +44,7 @@ export const Socials: FC = ({ ...rest }) => {
                         href="https://twitter.com"
                         target="_blank"
                         rel="noreferrer"
+                        className="twitter" // Clase para Twitter
                     >
                         <p>Twitter</p>
                         <Icon iconData="twitter" alt="twitter icon" />
@@ -51,6 +55,7 @@ export const Socials: FC = ({ ...rest }) => {
                         href="https://instagram.com"
                         target="_blank"
                         rel="noreferrer"
+                        className="instagram" // Clase para Instagram
                     >
                         <p>Instagram</p>
                         <Icon iconData="instagram" alt="instagram icon" />

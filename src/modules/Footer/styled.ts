@@ -5,9 +5,9 @@ import { MediaQuery } from "@styles/mediaQuery";
 export const FooterStyled = styled.footer`
     width: 100%;
 
-    background: ${Theme.secondary};
+    background: ${Theme.primary};
 
-    padding: 90px 0;
+    padding-bottom: 90px;
 `;
 
 export const FooterContainer = styled.div`
@@ -35,6 +35,6 @@ export const FooterContent = styled.div`
 
     p {
         margin: 0;
-        color: ${Theme.primary};
+        color: ${Theme.secondary};
     }
 `;

@@ -7,6 +7,8 @@ import HeroSlider1 from "../videos/Clip-8.mp4";
 import HeroSlider2 from "./hero-slider-02.webp";
 import HeroSlider3 from "./foto-arcoiris.jpeg";
 
+import FotoContacto from "./foto-vic-1.jpeg"
+
 import InfiniteImg1 from "./infinite-img-1.webp";
 import InfiniteImg2 from "./infinite-img-2.webp";
 
@@ -106,5 +108,6 @@ export {
     HeroSlider3,
     InfiniteImg1,
     InfiniteImg2,
-    Patron
+    Patron,
+    FotoContacto
 };

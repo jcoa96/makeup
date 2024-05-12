@@ -46,6 +46,64 @@ export const SocialsLink = styled.a`
     width: 100%;
     transform: translateY(0);
     transition: transform 0.3s;
+    border-radius: 15px;
+
+
+    /* Agregar estilos para cada red social */
+    &.github {
+        border-top: 8px solid #FF001882; /* Rojo */
+
+        p {
+            color: black;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+
+    &.linkedin {
+        border-top: 8px solid #FFA52C82; /* Naranja */
+
+        p {
+            color: black;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+
+    &.facebook {
+        border-top: 8px solid #FFFF4182; /* Amarillo */
+
+        p {
+            color: black;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+
+    &.twitter {
+        border-top: 8px solid #00801882; /* Verde */
+
+        p {
+            color: black;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+
+    &.instagram {
+        border-top: 8px solid #4B008282; /* Índigo */
+
+        p {
+            color: black;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
 
     &:hover {
         transform: translateY(-10px);
@@ -55,6 +113,8 @@ export const SocialsLink = styled.a`
         color: ${Theme.primary};
         font-size: 20px;
         line-height: 1.2;
+        border-radius: 8px;
+        font-weight: 500;
     }
 
     img {
