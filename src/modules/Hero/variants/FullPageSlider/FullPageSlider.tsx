@@ -59,7 +59,7 @@ export const FullPageSlider: FC<FullPageSliderProps> = ({ content }) => {
                             backgroundSize: 'contain'
 
                         }}
-                    autoPlay loop muted src={slide.background} />
+                    autoPlay playsInline loop muted src={slide.background} />
                 </div>
             )}
             {slide.background && !slide.videoBackground && (
