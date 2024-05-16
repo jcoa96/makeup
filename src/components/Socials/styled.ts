@@ -47,11 +47,11 @@ export const SocialsLink = styled.a`
     transform: translateY(0);
     transition: transform 0.3s;
     border-radius: 15px;
+    border-top: 8px solid #000000;
 
 
     /* Agregar estilos para cada red social */
     &.github {
-        border-top: 8px solid #000000; /* Rojo */
 
         p {
             color: black;
@@ -62,7 +62,6 @@ export const SocialsLink = styled.a`
     }
 
     &.linkedin {
-        border-top: 8px solid #000000; /* Naranja */
 
         p {
             color: black;
@@ -73,7 +72,6 @@ export const SocialsLink = styled.a`
     }
 
     &.facebook {
-        border-top: 8px solid #000000; /* Amarillo */
 
         p {
             color: black;
@@ -84,7 +82,6 @@ export const SocialsLink = styled.a`
     }
 
     &.twitter {
-        border-top: 8px solid #000000; /* Verde */
 
         p {
             color: black;
@@ -95,7 +92,6 @@ export const SocialsLink = styled.a`
     }
 
     &.instagram {
-        border-top: 8px solid #000000; /* Índigo */
 
         p {
             color: black;

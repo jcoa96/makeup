@@ -146,7 +146,7 @@ export const FullPageSliderSlideContent = styled.div`
     color: ${Theme.primary};
 
     h1 {
-        font-size: 4.5rem;
+        font-size: 5.5rem;
         line-height: 130px;
         text-transform: uppercase;
         font-weight: 900;
@@ -155,16 +155,17 @@ export const FullPageSliderSlideContent = styled.div`
         font-family: TanMeringue;
 
         ${MediaQuery.max("xl")} {
-            font-size: 90px;
+            font-size: 4rem;
             line-height: 95px;
             margin-bottom: 20px;
         }
 
         ${MediaQuery.max("lg")} {
-            font-size: 30px;
-            line-height: 50px;
+            font-size: 3rem;
+            line-height: 70px;
             margin-bottom: 20px;
-            margin-left: 0;
+            margin-left: -12px;
+
         }
     }
 
@@ -189,18 +190,16 @@ export const FullPageSliderSlideContentSubtitle = styled.p`
     font-weight: 900;
     letter-spacing: -1px;
     color: ${Theme.primary};
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 
     ${MediaQuery.max("xl")} {
         font-size: 20px;
         line-height: 25px;
-        margin-bottom: 20px;
     }
 
     ${MediaQuery.max("lg")} {
         font-size: 18px;
         line-height: 20px;
-        margin-bottom: 20px;
     }
 `;
 

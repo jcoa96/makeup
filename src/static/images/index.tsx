@@ -5,7 +5,7 @@ import Logo from "./logo-vic-new.webp";
 
 import HeroSlider1 from "../videos/Clip-8.mp4";
 import HeroSlider2 from "./hero-slider-02.webp";
-import HeroSlider3 from "./foto-arcoiris.jpeg";
+import HeroSlider3 from "./patron-3.png";
 
 import FotoContacto from "./foto-vic-1.jpeg"
 
